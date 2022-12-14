@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Churn Prediction</title>
+</head>
+<body>
+
+    <h1>Customer Churn Prediction</h1>
+    <form method="post" action="/predict">
+        <label>age</label><br>
+        <input type="text" name="age"><br><br>
+
+        <label>gender</label><br>
+        <input type="text" name="gender"><br><br>
+
+        <label>balance</label><br>
+        <input type="text" name="balance"><br><br>
+
+        <label>active</label><br>
+        <input type="text" name="active"><br><br>
+
+        <label>geography</label><br>
+        <input type="text" name="geography"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+    {% if result %}
+    <p>  {{result}} </p>
+    {% endif %}
+</body>
+</html>
